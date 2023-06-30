@@ -1,7 +1,7 @@
-workspace "Hammer" 
+workspace "Hammer"
 	architecture "x64"
 	startproject "Chess"
-	
+
 	configurations
 	{
 	"Debug",
@@ -47,7 +47,7 @@ project "Hammer"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Chess")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -62,8 +62,8 @@ project "Hammer"
 		defines "HM_DIST"
 		optimize "On"
 
-project "Chess"
-	location "Chess"
+project "Sandbox"
+	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 
